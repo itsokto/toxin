@@ -1,0 +1,30 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Colors & Types';
+    - var description = 'Colors & Types';
+
+block content
+    .content-wrapper
+        .flex-wrapper
+            .items-wrapper__colors
+                +color-item('Dark Shade 100%', '#1F2041')(class="color-item__shape-dark100")
+                +color-item('Dark Shade 75%', '#1F2041')(class="color-item__shape-dark75")
+                +color-item('Dark Shade 50%', '#1F2041')(class="color-item__shape-dark50")
+                +color-item('Dark Shade 25%', '#1F2041')(class="color-item__shape-dark25")
+                +color-item('Dark Shade 5%', '#1F2041')(class="color-item__shape-dark5")
+                +color-item('Purple', '#BC9CFF')(class="color-item__shape-primary")
+                +color-item('Green', '#6FCF97')(class="color-item__shape-secondary")
+            .items-wrapper__headers
+                    h1.header-item__header H1
+                    .header-item__text.title.title__h1 This one is the sub-section or widget title
+    
+                    h2.header-item__header H2
+                    .header-item__text.title.title__h2 Next one is the item title inside widgets
+    
+                    h3.header-item__header H3
+                    .header-item__text.title.title__h3 This is a label or CTA text
+    
+                    .body-text.header-item__header Body
+                    .body-text.header-item__text This is the body text which is used for most of the design, like paragraphs, lists, etc.
+block script
