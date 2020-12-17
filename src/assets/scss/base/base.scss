@@ -11,7 +11,16 @@ body {
   font-weight: $mainFontWeight;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 100%;
+  min-height: 100%;
+}
+
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
 }
 
 h1 {
@@ -36,21 +45,28 @@ h3 {
 
 .title {
   font-weight: bold;
-  &__h1 {
-    @extend h1;
-  }
-  &__h2 {
-    @extend h2;
-  }
-  &__h3 {
-    @extend h3;
-  }
 }
 
 .body-text {
   font-size: 14px;
   line-height: 24px;
   color: $dark-75;
+  &__header {
+    @extend .body-text;
+    line-height: 17px;
+    color: $dark-50;
+  }
 }
 
-
+.dropdown {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  &::after {
+    content: 'expand_more';
+    font-family: Material Icons;
+    font-size: 24px;
+    line-height: 24px;
+    display: flex;
+  }
+}

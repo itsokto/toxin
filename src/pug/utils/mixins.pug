@@ -5,3 +5,22 @@ mixin color-item(text, color)
             b=text
         .color-item__text=color
 
+mixin header(user)
+    header.header-ui
+        .header-ui__wrapper
+            .header-ui__logo
+                img(src="/assets/img/logo-linear.svg" width="40" height="40")
+                img(src="/assets/img/logo-text.svg")
+            .header-ui__items
+                .body-text
+                    b О нас
+                .body-text__header.dropdown Услуги
+                .body-text__header Вакансии
+                .body-text__header Новости
+                .body-text__header.dropdown Соглашения
+                if(user)
+                    .header-ui__separator
+                    .body-text__header= user
+                else
+                    button.button-bordered войти
+                    button.button-primary зарегистрироваться

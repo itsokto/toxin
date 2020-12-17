@@ -1,0 +1,47 @@
+.button {
+  @extend .title;
+  @extend h3;
+  border-radius: 22px;
+  padding: 10px 20px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  border: none;
+}
+
+.button-bordered {
+  @extend .button;
+  display: inline-block;
+  background: transparent;
+  color: $primary;
+  position: relative;
+  z-index: 1;
+  &::before {
+    content: ' ';
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -2;
+    background: $gradient;
+    border-radius: inherit;
+    position: absolute;
+  }
+  &::after {
+    content: ' ';
+    top: 2px;
+    bottom: 2px;
+    left: 2px;
+    right: 2px;
+    background-color: white;
+    z-index: -1;
+    opacity: 1;
+    transition: all 0.6s ease-in-out;
+    border-radius: inherit;
+    position: absolute;
+  }
+}
+
+.button-primary {
+  @extend .button;
+  color: white;
+  background: $gradient;
+}
