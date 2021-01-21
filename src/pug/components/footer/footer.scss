@@ -14,6 +14,11 @@
       padding-right: 70px;
     }
 
+    @media (max-width: $lg) {
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+
     &-main {
       @extend .footer-ui__container;
       display: flex;
