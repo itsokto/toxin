@@ -1,4 +1,10 @@
-@import '~/assets/scss/main.scss';
+@import '@/assets/scss/main';
+@import 'Components/navbar/navbar';
+@import 'Components/navbar/ui-kit/ui-kit';
+@import 'Components/footer/footer';
+@import 'Components/footer/creative/creative';
+@import 'Components/brand/brand';
+@import 'Components/input/input';
 
 .wrapper {
     background-color: #F4F4F6;

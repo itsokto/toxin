@@ -1,0 +1,37 @@
+@import '@/assets/scss/abstracts/vars';
+
+form {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid $dark-25;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+  &:hover,
+  &:focus-within {
+    border-color: $dark-50;
+  }
+}
+
+.input {
+  @extend .body-text;
+  display: block;
+  border: none;
+  padding: 12px 15px;
+  font-family: 'Montserrat';
+  width: 100%;
+  outline: none;
+
+  &__icon {
+    @extend .icon-gradient;
+    width: 44px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &::placeholder {
+    color: $dark-25;
+  }
+}

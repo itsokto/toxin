@@ -1,0 +1,38 @@
+@import '@/assets/scss/abstracts/vars';
+
+.header-ui {
+  padding: 15px 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 10px 20px $dark-5;
+
+  &__wrapper {
+    display: flex;
+    padding: 0 140px;
+    justify-content: space-between;
+
+    @media (max-width: $xl) {
+      padding-left: 70px;
+      padding-right: 70px;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    flex-direction: row;
+    gap: 12.5px;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+  }
+
+  &__separator {
+    height: 30px;
+    width: 1px;
+    background-color: $dark-10;
+  }
+}

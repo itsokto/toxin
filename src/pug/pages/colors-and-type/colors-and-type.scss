@@ -1,4 +1,5 @@
-@import '~/assets/scss/main.scss';
+@import '@/assets/scss/main';
+@import 'Components/navbar/ui-kit/ui-kit';
 
 .wrapper {
   flex: 1 1 0%;

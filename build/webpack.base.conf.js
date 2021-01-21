@@ -3,6 +3,7 @@ const glob = require('glob')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const webpack = require('webpack')
 
 // Main const
 // see more: https://github.com/vedees/webpack-template/blob/master/README.md#main-const
@@ -129,8 +130,10 @@ module.exports = {
     ]
   },
   resolve: {
+    extensions: ['.js', '.scss', '.pug'],
     alias: {
-      '~': PATHS.src
+      '@': PATHS.src,
+      Components: PATHS.src + '/pug/components/'
     }
   },
   plugins: [
@@ -140,10 +143,7 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
-        {
-          from: `${PATHS.src}/${PATHS.assets}fonts`,
-          to: `${PATHS.assets}fonts`
-        },
+        { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },
         { from: `${PATHS.src}/static`, to: '' }
       ]
     }),
@@ -156,6 +156,7 @@ module.exports = {
           chunks: [path.basename(page).replace(/\.pug/, ''), 'common'],
           filename: `${path.basename(page).replace(/\.pug/, '.html')}`
         })
-    )
+    ),
+    new webpack.HotModuleReplacementPlugin()
   ]
 }

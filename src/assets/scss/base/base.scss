@@ -9,8 +9,6 @@ body {
   font-family: $mainFont;
   font-size: $mainFontSize;
   font-weight: $mainFontWeight;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   min-height: 100%;
 }
 
@@ -64,9 +62,19 @@ h3 {
   align-items: center;
   &::after {
     content: 'expand_more';
-    font-family: Material Icons;
-    font-size: 24px;
-    line-height: 24px;
-    display: flex;
+    @extend .icon;
+  }
+}
+
+.icon {
+  font-family: Material Icons;
+  font-size: 24px;
+  line-height: 24px;
+
+  &-gradient {
+    @extend .icon;
+    background: $gradient;
+    background-clip: text;
+    color: transparent;
   }
 }
