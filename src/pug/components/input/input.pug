@@ -1,5 +1,7 @@
-mixin input(icon, placeholder='')
-    form
-        input.input(placeholder= placeholder)
-        if icon
-            button.input__icon= icon
+mixin input({placeholder='', icon, title, pattern})
+    .text-field-container
+        h3.title= title
+        label.text-field
+            input.text-field__input.body-text(placeholder= placeholder, pattern= pattern)
+            if icon
+                button.text-field__icon.icon-gradient= icon

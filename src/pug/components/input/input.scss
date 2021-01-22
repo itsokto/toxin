@@ -1,6 +1,12 @@
 @import '@/assets/scss/abstracts/vars';
 
-form {
+.text-field-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.text-field {
   display: flex;
   flex-direction: row;
   border: 1px solid $dark-25;
@@ -10,28 +16,26 @@ form {
   &:focus-within {
     border-color: $dark-50;
   }
-}
 
-.input {
-  @extend .body-text;
-  display: block;
-  border: none;
-  padding: 12px 15px;
-  font-family: 'Montserrat';
-  width: 100%;
-  outline: none;
+  &__input {
+    display: block;
+    border: none;
+    padding: 12px 15px;
+    font-family: 'Montserrat';
+    width: 100%;
+    outline: none;
+
+    &::placeholder {
+      color: $dark-25;
+    }
+  }
 
   &__icon {
-    @extend .icon-gradient;
     width: 44px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     &:hover {
       opacity: 0.5;
     }
-  }
-
-  &::placeholder {
-    color: $dark-25;
   }
 }
