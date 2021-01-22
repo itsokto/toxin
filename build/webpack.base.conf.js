@@ -1,5 +1,6 @@
 const path = require('path')
 const glob = require('glob')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
@@ -40,9 +41,9 @@ module.exports = {
     ...getEntries()
   },
   output: {
-    filename: `${PATHS.assets}js/[name].[hash].js`,
+    filename: `${PATHS.assets}js/[name].[chunkhash].js`,
     path: PATHS.dist,
-    publicPath: '/'
+    publicPath: './'
   },
   optimization: {
     runtimeChunk: 'single', // enable "runtime" chunk
@@ -63,10 +64,11 @@ module.exports = {
         loader: 'pug-loader'
       },
       {
-        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
         loader: 'file-loader',
         options: {
-          name: '[name].[ext]'
+          name: '[name].[ext]',
+          publicPath: './../fonts'
         }
       },
       {
@@ -137,14 +139,14 @@ module.exports = {
     }
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: `${PATHS.assets}css/[name].[hash].css`
+      filename: `${PATHS.assets}css/[name].[chunkhash].css`
     }),
     new CopyWebpackPlugin({
       patterns: [
         { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
-        { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },
-        { from: `${PATHS.src}/static`, to: '' }
+        { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` }
       ]
     }),
 
@@ -157,7 +159,6 @@ module.exports = {
           filename: `${path.basename(page).replace(/\.pug/, '.html')}`
         })
     ),
-    new webpack.HotModuleReplacementPlugin(),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery'
