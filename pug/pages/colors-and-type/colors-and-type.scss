@@ -1,0 +1,81 @@
+@import '@/assets/scss/main';
+@import 'Components/navbar/ui-kit/ui-kit';
+
+.wrapper {
+  flex: 1 1 0%;
+  height: 100%;
+}
+
+.content-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 37px 150px;
+}
+
+.flex-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.items-wrapper {
+  display: grid;
+  grid-template-columns: min-content auto;
+  height: 100%;
+  &__colors {
+    @extend .items-wrapper;
+    gap: 20px 40px;
+  }
+  &__headers {
+    @extend .items-wrapper;
+    gap: 50px 30px;
+    width: 39%;
+  }
+}
+
+.header-item {
+  &__header {
+    color: $dark-25;
+    text-align: right;
+  }
+  &__text {
+  }
+}
+
+.color-item {
+  &__shape {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+    &-dark100 {
+      background-color: $dark-100;
+    }
+    &-dark75 {
+      background-color: $dark-75;
+    }
+    &-dark50 {
+      background-color: $dark-50;
+    }
+    &-dark25 {
+      background-color: $dark-25;
+    }
+    &-dark5 {
+      background-color: $dark-5;
+    }
+    &-primary {
+      background-color: $primary;
+    }
+    &-secondary {
+      background-color: $secondary;
+    }
+  }
+  &__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__text {
+    font-size: 19px;
+    line-height: 28px;
+  }
+}

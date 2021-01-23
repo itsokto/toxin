@@ -1,0 +1,11 @@
+extends ../../layout/main
+include ../../components/input/input
+
+block variables
+    - var title = 'Form elements';
+    - var description = 'Form elements';
+
+block content
+    .content-wrapper
+        +input({title:'text field', placeholder:'Email'})
+block script
