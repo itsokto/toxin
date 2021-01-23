@@ -65,3 +65,13 @@
   color: white;
   background: $gradient;
 }
+
+.button-text {
+  @extend .button;
+  border: none;
+  color: $primary;
+  background-color: transparent;
+  &:hover {
+    color: $dark-50;
+  }
+}
