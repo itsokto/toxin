@@ -6,7 +6,7 @@
 ## 📄 Cтраницы ui-kit
 
 - [Colors & types](https://itsokto.github.io/toxin/colors-and-type.html)  
-- (WIP [Form elements](https://itsokto.github.io/toxin/form-elements.html)  
+- (WIP) [Form elements](https://itsokto.github.io/toxin/form-elements.html)  
 - (WIP) [Cards]()  
 - [Header & footers](https://itsokto.github.io/toxin/headers-and-footers.html)
 
