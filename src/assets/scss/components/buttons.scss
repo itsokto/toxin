@@ -5,9 +5,9 @@
   padding: 10px 20px;
   font-family: 'Montserrat', Arial, sans-serif;
   border: none;
-  transition: 0.3s;
-  &:hover {
-    opacity: 0.5;
+  transition: all 0.3s ease-in-out;
+  &-big {
+    padding: 14px 20px;
   }
 }
 
@@ -21,8 +21,7 @@
   padding: 0;
 }
 
-.button-bordered {
-  @extend .button;
+.button-outline {
   display: inline-block;
   background: transparent;
   color: $primary;
@@ -53,7 +52,6 @@
     position: absolute;
   }
   &:hover {
-    opacity: 1;
     &:before {
       opacity: 0.5;
     }
@@ -61,13 +59,14 @@
 }
 
 .button-primary {
-  @extend .button;
   color: white;
   background: $gradient;
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 .button-text {
-  @extend .button;
   border: none;
   color: $primary;
   background-color: transparent;
