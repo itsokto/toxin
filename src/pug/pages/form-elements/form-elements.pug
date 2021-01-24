@@ -1,5 +1,6 @@
 extends ../../layout/main
 include ../../components/input/input
+include ../../components/checkbox-button/checkbox-button
 
 block variables
     - var title = 'Form elements';
@@ -11,4 +12,7 @@ block content
         button.button.button-big.button-primary click me
         button.button.button-big.button-outline click me
         button.button.button-big.button-text click me
+        +checkbox-button('Можно курить')
+        +checkbox-button('Можно с питомцами')
+        +checkbox-button('Можно пригласить гостей (до 10 человек)')
 block script

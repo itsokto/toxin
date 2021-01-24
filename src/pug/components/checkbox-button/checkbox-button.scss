@@ -1,0 +1,42 @@
+@import '@/assets/scss/abstracts/vars';
+
+.checkbox-button {
+  display: block;
+  max-width: 222px;
+
+  &__container {
+    display: flex;
+    gap: 0 10px;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  &__custom-checkbox {
+    display: inline-block;
+    min-width: 20px;
+    min-height: 20px;
+    max-width: 20px;
+    max-height: 20px;
+    border: 1px solid $dark-25;
+    border-radius: 4px;
+  }
+
+  &__text {
+    font-size: 14px;
+    color: $dark-50;
+    white-space: pre-wrap;
+    line-height: 20px;
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  input:checked + span {
+    border-color: $primary;
+    background-image: url('./check.svg');
+    background-size: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
