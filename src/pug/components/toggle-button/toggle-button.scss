@@ -1,0 +1,49 @@
+@import '@/assets/scss/abstracts/vars';
+
+.toggle-button {
+  $self: &;
+  user-select: none;
+
+  &__container {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 10px;
+    cursor: pointer;
+  }
+
+  &__checkbox {
+    display: none;
+    &:checked ~ #{$self}__toggle {
+      border-color: $primary;
+      &:after {
+        background: $gradient;
+        left: calc(100% - 15px);
+      }
+    }
+  }
+
+  &__toggle {
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+    min-height: 20px;
+    min-width: 40px;
+    border-radius: 10px;
+    border: 1px solid $dark-25;
+    transition: all 0.3s ease-in-out;
+    &:after {
+      content: '';
+      position: absolute;
+      left: 3px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: $dark-25;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  &__text {
+    white-space: pre-wrap;
+  }
+}
