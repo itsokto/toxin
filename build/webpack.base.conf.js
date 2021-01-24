@@ -64,18 +64,21 @@ module.exports = {
         loader: 'pug-loader'
       },
       {
-        test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
+        test: /\.(woff(2)?|ttf|eot)$/,
         loader: 'file-loader',
         options: {
           name: '[name].[ext]',
-          publicPath: './../fonts'
+          publicPath: './../fonts',
+          outputPath: PATHS.assets + 'fonts',
         }
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
         loader: 'file-loader',
         options: {
-          name: '[name].[ext]'
+          name: '[name].[ext]',
+          publicPath: './../img',
+          outputPath: PATHS.assets + 'img',
         }
       },
       {

@@ -9,9 +9,7 @@
       format('woff2'),
     url('../../fonts/montserrat-v15-latin_cyrillic-regular.woff') format('woff'),
     url('../../fonts/montserrat-v15-latin_cyrillic-regular.ttf')
-      format('truetype'),
-    url('../../fonts/montserrat-v15-latin_cyrillic-regular.svg#Montserrat')
-      format('svg');
+      format('truetype');
 }
 
 /* montserrat-700 - latin_cyrillic */
@@ -25,9 +23,7 @@
       format('embedded-opentype'),
     url('../../fonts/montserrat-v15-latin_cyrillic-700.woff2') format('woff2'),
     url('../../fonts/montserrat-v15-latin_cyrillic-700.woff') format('woff'),
-    url('../../fonts/montserrat-v15-latin_cyrillic-700.ttf') format('truetype'),
-    url('../../fonts/montserrat-v15-latin_cyrillic-700.svg#Montserrat')
-      format('svg');
+    url('../../fonts/montserrat-v15-latin_cyrillic-700.ttf') format('truetype');
 }
 
 @font-face {
@@ -36,6 +32,5 @@
   font-style: normal;
   src: url('../../fonts/MaterialIcons-Regular.eot');
   src: local(''), url('../../fonts/MaterialIcons-Regular.woff') format('woff'),
-    url('../../fonts/MaterialIcons-Regular.ttf') format('truetype'),
-    url('../../fonts/MaterialIcons-Regular.svg') format('svg');
+    url('../../fonts/MaterialIcons-Regular.ttf') format('truetype');
 }
