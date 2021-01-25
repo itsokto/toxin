@@ -1,0 +1,6 @@
+mixin bullet-list(items) 
+    .bullet-list
+        ul.bullet-list__ul
+        each item in items
+            li.bullet-list__li
+                span.bullet-list__text.body-text= item

@@ -3,6 +3,7 @@ include ../../components/input/input
 include ../../components/checkbox-button/checkbox-button
 include ../../components/toggle-button/toggle-button
 include ../../components/radio-button/radio-button
+include ../../components/bullet-list/bullet-list
 
 block variables
     - var title = 'Form elements';
@@ -21,4 +22,6 @@ block content
         +toggle-button('Получать спецпредложения')
         +radio-button('Мужчина', 'sex')
         +radio-button('Женщина', 'sex')
+        - var items = ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, \nа выезд до 12:00'];
+        +bullet-list(items)
 block script
