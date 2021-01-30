@@ -6,6 +6,7 @@ include ../../components/radio-button/radio-button
 include ../../components/bullet-list/bullet-list
 include ../../components/rich-checkbox/rich-checkbox
 include ../../components/expandable-list/expandable-list
+include ../../components/advantages-list/advantages-list
 
 block variables
     - var title = 'Form elements';
@@ -35,4 +36,9 @@ block content
             +checkbox-button('Кроватка')
             +checkbox-button('Телевизор')
             +checkbox-button('Шампунь')
+        - var advantages = [
+        -       {icon:'insert_emoticon', title:'Комфорт', description:'Шумопоглощающие стены'},
+        -       {icon:'location_city', title:'Удобство', description:'Окно в каждой из спален'}
+        -    ];
+        +advantages-list(advantages)
 block script

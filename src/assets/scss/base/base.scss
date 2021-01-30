@@ -67,17 +67,11 @@ h3 {
   font-family: 'Material Icons';
   font-size: 24px;
   line-height: 24px;
-  cursor: pointer;
   transition: all 0.3s ease-in-out;
 
   &-gradient {
-    @extend .icon;
     background: $gradient;
     background-clip: text;
     color: transparent;
-
-    &:hover {
-      opacity: 0.5;
-    }
   }
 }

@@ -1,0 +1,10 @@
+mixin advantages-list(items)
+    .advantages-list
+        ul.advantages-list__ul 
+            each item in items
+                li.advantages-list__li
+                    .advantage__container
+                        .advantage__icon.icon.icon-gradient= item.icon
+                        .advantage__text-container
+                            span.advantage__title.title= item.title
+                            span.advantages__description.body-text= item.description

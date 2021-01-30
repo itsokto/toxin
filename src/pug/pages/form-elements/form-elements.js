@@ -6,6 +6,7 @@ import 'Components/radio-button/radio-button'
 import 'Components/bullet-list/bullet-list'
 import 'Components/rich-checkbox/rich-checkbox'
 import 'Components/expandable-list/expandable-list.scss'
+import 'Components/advantages-list/advantages-list.scss'
 import Inputmask from 'inputmask'
 import ExpandableList from 'Components/expandable-list/expandable-list'
 

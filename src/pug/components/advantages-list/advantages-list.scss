@@ -1,0 +1,43 @@
+@import '@/assets/scss/abstracts/vars';
+
+.advantages-list {
+  display: flex;
+  max-width: 300px;
+  &__li {
+    display: block;
+    border-bottom: 1px solid $dark-10;
+    padding-bottom: 17px;
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+  }
+}
+
+.advantage {
+  &__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 10px;
+  }
+
+  &__icon {
+    font-size: 48px;
+    line-height: 41px;
+  }
+
+  &__text-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+  }
+
+  &__title {
+    color: $dark-75;
+    white-space: pre-wrap;
+  }
+
+  &__description {
+    white-space: pre-wrap;
+  }
+}
