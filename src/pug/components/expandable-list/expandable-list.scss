@@ -1,0 +1,45 @@
+@import '@/assets/scss/abstracts/vars';
+
+.expandable-list {
+  $self: &;
+  display: block;
+  max-width: 266px;
+  user-select: none;
+
+  &__title-container {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &_active #{$self}__icon {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__title {
+    font-size: 12px;
+  }
+
+  &__icon {
+    display: block;
+    font-family: 'Material Icons';
+    font-size: 24px;
+    line-height: 24px;
+    transition: all 0.3s ease-in-out;
+    color: $dark-50;
+  }
+
+  &__dropdown {
+    top: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    &_active {
+      padding-top: 10px;
+      max-height: 1000px;
+    }
+  }
+}

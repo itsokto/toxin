@@ -1,0 +1,10 @@
+mixin expandable-list(title)
+    .expandable-list
+        .expandable-list__title-container.js-expandable-list__title-container
+            h3.title.expandable-list__title= title
+            .expandable-list__icon= 'expand_more'
+        .expandable-list__dropdown.js-expandable-list__dropdown
+            if block
+                block
+            else
+                .body-text No content provided

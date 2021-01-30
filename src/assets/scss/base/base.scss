@@ -29,10 +29,6 @@ h1 {
 h2 {
   font-size: 19px;
   line-height: 23px;
-  &__title {
-    @extend h2;
-    font-weight: bold;
-  }
 }
 
 h3 {
@@ -42,6 +38,7 @@ h3 {
 }
 
 .title {
+  color: $dark-100;
   font-weight: bold;
 }
 
@@ -67,7 +64,7 @@ h3 {
 }
 
 .icon {
-  font-family: Material Icons;
+  font-family: 'Material Icons';
   font-size: 24px;
   line-height: 24px;
   cursor: pointer;

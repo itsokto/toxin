@@ -5,6 +5,7 @@ include ../../components/toggle-button/toggle-button
 include ../../components/radio-button/radio-button
 include ../../components/bullet-list/bullet-list
 include ../../components/rich-checkbox/rich-checkbox
+include ../../components/expandable-list/expandable-list
 
 block variables
     - var title = 'Form elements';
@@ -27,4 +28,11 @@ block content
         +bullet-list(items)
         +rich-checkbox('Широкий коридор', 'Ширина коридоров в номере \nне менее 91 см.')
         +rich-checkbox('Помощник для инвалидов', 'На 1 этаже вас встретит специалист \nи проводит до номера.')
+        +expandable-list('expandable checkbox list')
+            +checkbox-button('Можно курить')
+            +checkbox-button('Письменный стол')
+            +checkbox-button('Стул для кормления')
+            +checkbox-button('Кроватка')
+            +checkbox-button('Телевизор')
+            +checkbox-button('Шампунь')
 block script
