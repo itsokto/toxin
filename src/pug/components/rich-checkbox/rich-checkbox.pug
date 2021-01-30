@@ -1,0 +1,8 @@
+mixin rich-checkbox(title, description)
+    .rich-checkbox
+        label.rich-checkbox__container
+            input(type="checkbox").rich-checkbox__checkbox
+            span.rich-checkbox__custom-checkbox(tabindex='0')
+            .rich-checkbox__text-container
+                span.rich-checkbox__title= title
+                span.rich-checkbox__description= description

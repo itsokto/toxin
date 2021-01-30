@@ -4,6 +4,7 @@ include ../../components/checkbox-button/checkbox-button
 include ../../components/toggle-button/toggle-button
 include ../../components/radio-button/radio-button
 include ../../components/bullet-list/bullet-list
+include ../../components/rich-checkbox/rich-checkbox
 
 block variables
     - var title = 'Form elements';
@@ -24,4 +25,6 @@ block content
         +radio-button('Женщина', 'sex')
         - var items = ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, \nа выезд до 12:00'];
         +bullet-list(items)
+        +rich-checkbox('Широкий коридор', 'Ширина коридоров в номере \nне менее 91 см.')
+        +rich-checkbox('Помощник для инвалидов', 'На 1 этаже вас встретит специалист \nи проводит до номера.')
 block script

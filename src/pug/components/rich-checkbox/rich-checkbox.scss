@@ -1,0 +1,55 @@
+@import '@/assets/scss/abstracts/vars';
+
+.rich-checkbox {
+  display: block;
+  max-width: 266px;
+
+  &__container {
+    display: flex;
+    gap: 0 10px;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__custom-checkbox {
+    display: inline-block;
+    min-width: 20px;
+    min-height: 20px;
+    max-width: 20px;
+    max-height: 20px;
+    border: 1px solid $dark-25;
+    border-radius: 4px;
+  }
+
+  &__text-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+
+  &__title {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: bold;
+    color: $dark-75;
+  }
+
+  &__description {
+    font-size: 12px;
+    line-height: 14px;
+    color: $dark-50;
+    white-space: pre-wrap;
+  }
+
+  input:checked + span {
+    border-color: $primary;
+    background-image: url('./check.svg');
+    background-size: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
