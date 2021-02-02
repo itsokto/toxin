@@ -3,6 +3,7 @@ include ../../components/input/input
 include ../../components/checkbox-button/checkbox-button
 include ../../components/toggle-button/toggle-button
 include ../../components/radio-button/radio-button
+include ../../components/like-button/like-button
 include ../../components/bullet-list/bullet-list
 include ../../components/rich-checkbox/rich-checkbox
 include ../../components/expandable-list/expandable-list
@@ -41,4 +42,6 @@ block content
         -       {icon:'location_city', title:'Удобство', description:'Окно в каждой из спален'}
         -    ];
         +advantages-list(advantages)
+        +like-button('2')
+        +like-button('11')
 block script
