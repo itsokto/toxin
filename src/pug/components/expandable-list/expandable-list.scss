@@ -11,9 +11,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    &_active #{$self}__icon {
-      transform: rotate(180deg);
-    }
   }
 
   &__title {
@@ -37,7 +34,14 @@
     display: flex;
     flex-direction: column;
     row-gap: 10px;
-    &_active {
+  }
+
+  &_active {
+    #{$self}__icon {
+      transform: rotate(180deg);
+    }
+
+    #{$self}__dropdown {
       padding-top: 10px;
       max-height: 1000px;
     }
